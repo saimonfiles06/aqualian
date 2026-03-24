@@ -11,11 +11,11 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     background: linear-gradient(180deg,
-            #ffffff 0%,
-            #f8fafc 25%,
-            #e2e8f0 50%,
-            #1e3a5f 75%,
-            #0a2540 100%);
+        #ffffff 0%,
+        #f8fafc 25%,
+        #e2e8f0 50%,
+        #1e3a5f 75%,
+        #0a2540 100%);
 }
 
 /* ================= VARIABLES ================= */
@@ -25,6 +25,7 @@ body {
     --light: #f8fafc;
     --border: #e5e7eb;
     --text-muted: #64748b;
+    --footer-blue: #1e3a5f;
 }
 
 /* ================= CONTAINER ================= */
@@ -71,7 +72,6 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Subrayado suave */
 .desktop-nav a::after {
     content: "";
     position: absolute;
@@ -122,6 +122,7 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1100;
 }
 
 .hamburger span {
@@ -150,9 +151,9 @@ body {
     inset: 0;
     background: white;
     transform: translateX(100%);
-    transition: 0.4s ease;
+    transition: transform 0.4s ease;
     padding: 120px 30px;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .mobile-menu.active {
@@ -253,7 +254,7 @@ h2 {
 
 .service-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
 }
 
 /* ================= PROJECT CARDS ================= */
@@ -269,7 +270,7 @@ h2 {
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -283,7 +284,7 @@ h2 {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .project-overlay {
@@ -294,9 +295,9 @@ h2 {
     justify-content: flex-end;
     padding: 20px;
     background: linear-gradient(to top,
-            rgba(10, 37, 64, 0.95) 0%,
-            rgba(10, 37, 64, 0.6) 40%,
-            rgba(10, 37, 64, 0) 100%);
+        rgba(10, 37, 64, 0.95) 0%,
+        rgba(10, 37, 64, 0.6) 40%,
+        rgba(10, 37, 64, 0) 100%);
     color: #fff;
     opacity: 0;
     transition: opacity 0.35s ease;
@@ -318,32 +319,31 @@ h2 {
 }
 
 /* ================= CTA PARA PROYECTOS ================= */
-/* ================= CTA PARA PROYECTOS ================= */
-/* ================= CTA PARA PROYECTOS ================= */
 .projects-cta {
     text-align: center;
     margin-top: 50px;
 }
 
 .projects-cta .btn-primary {
-    background: #1e3a5f;               /* fondo azul del footer */
-    color: #fff;                        /* texto blanco */
+    background: var(--footer-blue);
+    color: #fff;
     padding: 20px 30px;
-    border-radius: 16px;               /* mismo radio que las cards */
+    border-radius: 16px;
     border: none;
     font-weight: 600;
     font-size: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* sombra como las cards */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .projects-cta .btn-primary:hover {
-    background: #ffffff;               /* fondo blanco al hover */
-    color: #1e3a5f;                    /* texto azul */
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06); /* sombra más suave */
-    transform: translateY(-5px);       /* efecto lift */
+    background: #ffffff;
+    color: var(--footer-blue);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    transform: translateY(-5px);
 }
+
 /* ================= PROCESS ================= */
 .process-steps {
     display: grid;
@@ -360,9 +360,7 @@ h2 {
 /* ================= CTA ================= */
 .cta-section {
     text-align: center;
-    background: linear-gradient(135deg,
-            #0a2540,
-            #1e3a5f);
+    background: linear-gradient(135deg, #0a2540, var(--footer-blue));
     color: #fff;
     border-radius: 20px;
     margin: 80px auto;
@@ -397,7 +395,6 @@ h2 {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
-
     .services-grid,
     .projects-grid,
     .process-steps {
@@ -415,7 +412,6 @@ h2 {
 }
 
 @media (max-width: 600px) {
-
     .services-grid,
     .projects-grid,
     .process-steps {

@@ -2,18 +2,8 @@
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
-// Toggle menú
+// Toggle del menú móvil al hacer click en la hamburguesa
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
-});
-
-// Cerrar menú al hacer click en enlace
-const links = mobileMenu.querySelectorAll("a");
-
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-        hamburger.classList.remove("active");
-    });
+    hamburger.classList.toggle("active");  // anima la hamburguesa
+    mobileMenu.classList.toggle("active"); // abre/cierra el menú
 });
