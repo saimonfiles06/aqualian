@@ -437,7 +437,56 @@ h2 {
     color: #cbd5f5;
     text-decoration: none;
 }
+/* ================= HERO PROYECTOS ================= */
+.projects-hero {
+    padding: 140px 0 60px;
+}
 
+.projects-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.projects-hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* ================= FILTROS ================= */
+.projects-filters {
+    padding: 20px 0;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.filter.active {
+    background: var(--footer-blue);
+    color: white;
+    border-color: transparent;
+}
+
+/* ================= LISTADO ================= */
+.projects-list {
+    padding-top: 40px;
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
 
