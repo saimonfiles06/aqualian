@@ -394,6 +394,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    
 }
 
 .step h3 {
@@ -487,6 +488,72 @@ h2 {
 .projects-list {
     padding-top: 40px;
 }
+/* ================= EMPRESA ================= */
+
+/* HERO */
+.about-hero {
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-muted);
+}
+
+/* INTRO */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* PROCESS (reutiliza estilos existentes) */
+
+/* VALORES */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+/* CTA */
+.about-cta {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0a2540, var(--footer-blue));
+    color: #fff;
+    border-radius: 20px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1100px;
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
 
@@ -517,6 +584,13 @@ h2 {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
+    }
+      .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -610,5 +684,16 @@ h2 {
 
     .projects-hero p {
         font-size: 16px;
+    }
+      .about-hero {
+        padding: 100px 0 60px;
+    }
+
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
     }
 }
