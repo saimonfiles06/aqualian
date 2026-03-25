@@ -490,12 +490,14 @@ h2 {
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
 
+    /* Grids */
     .services-grid,
     .projects-grid,
     .process-steps {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Navegación */
     .desktop-nav,
     .cta {
         display: none;
@@ -504,16 +506,30 @@ h2 {
     .hamburger {
         display: flex;
     }
+
+    /* Proyectos */
+    .projects-header {
+        text-align: center;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 600px) {
 
+    /* Grids */
     .services-grid,
     .projects-grid,
     .process-steps {
         grid-template-columns: 1fr;
     }
 
+    /* Hero */
     .hero h1 {
         font-size: 32px;
     }
@@ -521,5 +537,78 @@ h2 {
     .hero {
         height: auto;
         padding: 100px 0;
+    }
+
+    /* ================= PROYECTOS ================= */
+
+    section.projects {
+        padding: 60px 0;
+    }
+
+    /* Cards */
+    .project-card {
+        border-radius: 14px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    /* Overlay visible en móvil */
+    .project-overlay {
+        opacity: 1;
+        padding: 15px;
+    }
+
+    .project-overlay h3 {
+        font-size: 16px;
+    }
+
+    .project-overlay p {
+        font-size: 13px;
+    }
+
+    /* Filtros */
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filters button {
+        font-size: 14px;
+        padding: 8px 14px;
+        border-radius: 20px;
+    }
+
+    /* CTA proyectos */
+    .projects-cta .btn-primary {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    /* Feedback táctil */
+    .project-card:active {
+        transform: scale(0.98);
+    }
+
+    /* Cabecera proyectos (si la usas) */
+    .projects-hero {
+        padding: 80px 20px 40px;
+        text-align: center;
+    }
+
+    .projects-hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .projects-hero p {
+        font-size: 16px;
     }
 }
