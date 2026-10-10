@@ -1,192 +1,284 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros | Aqualian Piscinas</title>
-    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
-    <!-- Estilos -->
-    <link rel="stylesheet" href="assets/css/estilos.css">
-</head>
-
-<body>
-
-    <!-- ================= HEADER ================= -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conoce Aqualian Piscinas, especialistas en soluciones técnicas para piscinas y colaboradores de arquitectos y constructoras en Valencia."
+    />
+    <title>Nosotros | Aqualian Piscinas</title>
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Hoja de estilos general -->
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
     <header class="header">
-        <div class="container header-container">
-
-            <!-- Logo -->
-            <div class="logo">
-                <img src="assets/img/logo.png" alt="Aqualian Piscinas">
-            </div>
-
-            <!-- Menú Desktop -->
-            <nav class="nav desktop-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="proyectos.html">Proyectos</a></li>
-                    <li><a href="empresa.html" style="color: #0077ff;">Empresa</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <!-- CTA -->
-            <div class="cta">
-                <a href="mailto:info@aqualian.com" class="btn-primary">Colaborar</a>
-            </div>
-
-            <!-- Hamburguesa -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </div>
-
-        <!-- Menú móvil -->
-        <div class="mobile-menu" id="mobileMenu">
-
-            <!-- Botón cerrar -->
-            <button class="close-menu" id="closeMenu">×</button>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="proyectos.html">Proyectos</a></li>
-                    <li><a href="empresa.html" style="color: #0077ff;">Empresa</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <div class="mobile-cta">
-                <p>¿Quieres contactarnos?</p>
-                <a href="mailto:info@aqualian.com" class="phone">✉️ Enviar correo</a>
-            </div>
-
-        </div>
+      <div class="container">
+        <a
+          href="index.html"
+          class="logo"
+          aria-label="Aqualian Piscinas - Inicio"
+        >
+          <img src="assets/img/logo_texto.ico" alt="Aqualian Piscinas" />
+        </a>
+        <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html" class="active" aria-current="page">
+            Nosotros
+          </a>
+          <a href="servicios.html">Servicios</a>
+          <a href="proyectos.html">Proyectos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <a href="contacto.html" class="header-button">
+          Solicita tu proyecto
+          <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
-
-    <!-- ================= HERO ================= -->
-    <section class="about-hero">
-        <div class="container">
-            <h1>Especialistas en soluciones técnicas para piscinas</h1>
+    <main>
+      <!-- HERO -->
+      <section class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <div class="container about-hero-content">
+          <span class="about-eyebrow"> AQUALIAN PISCINAS </span>
+          <h1>Especialistas en soluciones técnicas para piscinas</h1>
+          <p>
+            Colaboramos con estudios de arquitectura y constructoras en el
+            desarrollo de proyectos de piscina, aportando conocimiento técnico y
+            ejecución especializada.
+          </p>
+          <a href="contacto.html" class="about-button">
+            Hablemos de tu proyecto
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+      <!-- QUIÉNES SOMOS -->
+      <section class="about-intro">
+        <div class="container about-intro-grid">
+          <div class="about-intro-image">
+            <img
+              src="assets/img/nosotros-piscina.jpg"
+              alt="Piscina integrada en un proyecto arquitectónico contemporáneo"
+              loading="lazy"
+            />
+            <div class="about-image-label">
+              <i class="bi bi-water" aria-hidden="true"></i>
+              <span>Soluciones para cada proyecto</span>
+            </div>
+          </div>
+          <div class="about-intro-content">
+            <span class="about-eyebrow"> QUIÉNES SOMOS </span>
+            <h2>Técnica, diseño y ejecución al servicio de cada piscina</h2>
             <p>
-                Colaboramos con estudios de arquitectura y constructoras en el desarrollo
-                de proyectos de piscina, aportando conocimiento técnico y ejecución especializada.
+              Aqualian Piscinas es una empresa especializada en el diseño, la
+              construcción y el mantenimiento de piscinas en el ámbito
+              residencial y profesional.
             </p>
+            <p>
+              Trabajamos junto a arquitectos, promotores y empresas
+              constructoras, adaptando las soluciones a las características de
+              cada proyecto y buscando resultados funcionales, duraderos y
+              coherentes con su diseño.
+            </p>
+            <a href="servicios.html" class="about-text-link">
+              Descubre nuestros servicios
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-    </section>
-
-    <!-- ================= INTRO ================= -->
-    <section class="about-intro">
-        <div class="container about-grid">
-
-            <div>
-                <h2>Quiénes somos</h2>
-                <p>
-                    Aqualian Piscinas es una empresa especializada en el diseño,
-                    construcción y mantenimiento de piscinas en el ámbito residencial y profesional.
-                </p>
-                <p>
-                    Trabajamos junto a arquitectos, promotores y constructoras,
-                    adaptándonos a cada proyecto y garantizando soluciones eficientes y duraderas.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ================= PROCESO ================= -->
-    <section class="about-process">
+      </section>
+      <!-- VALORES -->
+      <section class="about-values">
         <div class="container">
-            <h2>Cómo trabajamos</h2>
-
-            <div class="process-steps">
-
-                <div class="step">
-                    <h3>01</h3>
-                    <p>Análisis técnico del proyecto</p>
-                </div>
-
-                <div class="step">
-                    <h3>02</h3>
-                    <p>Coordinación con dirección de obra</p>
-                </div>
-
-                <div class="step">
-                    <h3>03</h3>
-                    <p>Ejecución especializada</p>
-                </div>
-
-                <div class="step">
-                    <h3>04</h3>
-                    <p>Seguimiento y mantenimiento</p>
-                </div>
-
-            </div>
+          <div class="about-section-heading">
+            <span class="about-eyebrow"> NUESTRO ENFOQUE </span>
+            <h2>Lo que define nuestra forma de trabajar</h2>
+            <p>
+              Abordamos cada proyecto desde la atención técnica, la coordinación
+              y el compromiso con el resultado.
+            </p>
+          </div>
+          <div class="about-values-grid">
+            <article class="about-value-card">
+              <div class="about-value-icon" aria-hidden="true">
+                <i class="bi bi-rulers"></i>
+              </div>
+              <span class="about-value-number">01</span>
+              <h3>Precisión técnica</h3>
+              <p>
+                Estudiamos las características de cada proyecto para proponer
+                soluciones adaptadas a sus necesidades arquitectónicas.
+              </p>
+            </article>
+            <article class="about-value-card">
+              <div class="about-value-icon" aria-hidden="true">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <span class="about-value-number">02</span>
+              <h3>Fiabilidad</h3>
+              <p>
+                Trabajamos con planificación, atención a los detalles y
+                seguimiento de los compromisos acordados para cada actuación.
+              </p>
+            </article>
+            <article class="about-value-card">
+              <div class="about-value-icon" aria-hidden="true">
+                <i class="bi bi-people"></i>
+              </div>
+              <span class="about-value-number">03</span>
+              <h3>Colaboración</h3>
+              <p>
+                Coordinamos nuestro trabajo con arquitectos, promotores y
+                constructoras para avanzar hacia los objetivos compartidos.
+              </p>
+            </article>
+            <article class="about-value-card">
+              <div class="about-value-icon" aria-hidden="true">
+                <i class="bi bi-gem"></i>
+              </div>
+              <span class="about-value-number">04</span>
+              <h3>Calidad de ejecución</h3>
+              <p>
+                Prestamos atención a los materiales, los acabados y los aspectos
+                técnicos de cada instalación.
+              </p>
+            </article>
+          </div>
         </div>
-    </section>
-
-    <!-- ================= VALORES ================= -->
-    <section class="about-values">
+      </section>
+      <!-- CÓMO TRABAJAMOS -->
+      <section class="about-process">
         <div class="container">
-            <h2>Enfoque</h2>
+          <div class="about-section-heading">
+            <span class="about-eyebrow"> CÓMO TRABAJAMOS </span>
+            <h2>Un proceso claro en cada proyecto</h2>
+            <p>
+              Organizamos el trabajo por fases para facilitar la coordinación y
+              el seguimiento de las actuaciones.
+            </p>
+          </div>
+          <div class="about-process-grid">
+            <article class="about-process-step">
+              <span class="about-process-number">01</span>
+              <div class="about-process-icon" aria-hidden="true">
+                <i class="bi bi-clipboard2-check"></i>
+              </div>
+              <h3>Análisis técnico</h3>
+              <p>
+                Estudiamos las necesidades, el espacio y los requisitos del
+                proyecto.
+              </p>
+            </article>
+            <article class="about-process-step">
+              <span class="about-process-number">02</span>
+              <div class="about-process-icon" aria-hidden="true">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <h3>Coordinación</h3>
+              <p>
+                Coordinamos las actuaciones con la dirección facultativa y los
+                demás profesionales implicados.
+              </p>
+            </article>
+            <article class="about-process-step">
+              <span class="about-process-number">03</span>
+              <div class="about-process-icon" aria-hidden="true">
+                <i class="bi bi-cone-striped"></i>
+              </div>
+              <h3>Ejecución especializada</h3>
+              <p>
+                Realizamos los trabajos previstos según el alcance y la
+                planificación acordados.
+              </p>
+            </article>
 
-            <div class="values-grid">
-
-                <div class="value-card">
-                    <h3>Precisión técnica</h3>
-                    <p>Soluciones adaptadas a cada proyecto arquitectónico.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Fiabilidad</h3>
-                    <p>Cumplimiento de plazos y estándares de calidad.</p>
-                </div>
-
-                <div class="value-card">
-                    <h3>Colaboración</h3>
-                    <p>Trabajo coordinado con todos los agentes del proyecto.</p>
-                </div>
-
-            </div>
+            <article class="about-process-step">
+              <span class="about-process-number">04</span>
+              <div class="about-process-icon" aria-hidden="true">
+                <i class="bi bi-check2-circle"></i>
+              </div>
+              <h3>Seguimiento</h3>
+              <p>
+                Revisamos el resultado y atendemos las necesidades posteriores
+                que se hayan acordado.
+              </p>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- ================= FOOTER ================= -->
+      <!-- CTA FINAL -->
+      <section class="about-cta">
+        <div class="container about-cta-content">
+          <div class="about-cta-text">
+            <span class="about-eyebrow"> COLABOREMOS </span>
+            <h2>¿Tienes un proyecto de piscina en desarrollo?</h2>
+            <p>
+              Cuéntanos qué necesitas y valoremos cómo puede colaborar Aqualian
+              en tu próximo proyecto.
+            </p>
+          </div>
+          <a href="contacto.html" class="about-button about-button-light">
+            Contactar con Aqualian
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer-container">
-
-            <div class="footer-col">
-                <h3>Aqualian Piscinas</h3>
-                <p>Especialistas en soluciones para arquitectura y construcción en Valencia.</p>
-            </div>
-
-            <div class="footer-col">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="proyectos.html">Proyectos</a></li>
-                    <li><a href="empresa.html">Empresa</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <p>Burjassot, Valencia</p>
-                <p>info@aqualian.com</p>
-            </div>
-
+      <div class="container">
+        <div class="footer-logo">
+          <a href="index.html" aria-label="Aqualian Piscinas - Inicio">
+            <img
+              src="assets/img/logo-blanco.png"
+              alt="Aqualian Piscinas"
+              loading="lazy"
+            />
+          </a>
         </div>
+        <div class="footer-contact">
+          <span class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+            <span>Burjassot, Valencia</span>
+          </span>
+          <span class="footer-contact-item">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            <a href="mailto:info@aqualian.com"> info@aqualian.com </a>
+          </span>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/"
+            aria-label="Instagram de Aqualian Piscinas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
     </footer>
-
-    <!-- Script -->
-    <script src="assets/js/script.js"></script>
-
-</body>
-
+  </body>
+  <script src="assets/js/script.js"></script>
 </html>
