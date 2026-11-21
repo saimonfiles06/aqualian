@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import PillNav from "./PillNav";
-import logo from "../assets/img/logo.ico";
+import logo from "../assets/img/logo.png";
 
 const items = [
   { label: "Inicio", href: "/" },

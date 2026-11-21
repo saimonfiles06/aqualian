@@ -6,7 +6,7 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<h1>Inicio</h1>} />
+        <Route path="/" element={null} />
         <Route path="/nosotros" element={<h1>Nosotros</h1>} />
         <Route path="/servicios" element={<h1>Servicios</h1>} />
         <Route path="/proyectos" element={<h1>Proyectos</h1>} />
