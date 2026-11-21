@@ -9,12 +9,12 @@ body {
   background: #06172e; /* TEMPORAL, hasta tener el hero */
 }
 
-.app {
+.pagina {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.app__contenido {
+.pagina__contenido {
   flex: 1;
 }

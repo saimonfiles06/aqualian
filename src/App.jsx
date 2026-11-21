@@ -1,23 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import InicioView from "./views/InicioView";
+import NosotrosView from "./views/NosotrosView";
+import ServiciosView from "./views/ServiciosView";
+import ProyectosView from "./views/ProyectosView";
+import ContactoView from "./views/ContactoView";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="app">
-        <Header />
-        <div className="app__contenido">
-          {/* <Routes>
-            <Route path="/" element={null} />
-            <Route path="/nosotros" element={<h1>Nosotros</h1>} />
-            <Route path="/servicios" element={<h1>Servicios</h1>} />
-            <Route path="/proyectos" element={<h1>Proyectos</h1>} />
-            <Route path="/contacto" element={<h1>Contacto</h1>} />
-          </Routes> */}
-        </div>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<InicioView />} />
+        <Route path="/nosotros" element={<NosotrosView />} />
+        <Route path="/servicios" element={<ServiciosView />} />
+        <Route path="/proyectos" element={<ProyectosView />} />
+        <Route path="/contacto" element={<ContactoView />} />
+      </Routes>
     </BrowserRouter>
   );
 }
