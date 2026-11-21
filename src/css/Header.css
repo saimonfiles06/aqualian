@@ -1,0 +1,46 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px clamp(20px, 5.5vw, 80px);
+}
+
+/* Pill Nav mide el ancho de este contenedor para decidir cuándo colapsar al menú móvil */
+.header__nav {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header__cta {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.header__cta:hover,
+.header__cta:focus-visible {
+  background: #2fd0e8;
+  border-color: #2fd0e8;
+  color: #06172e;
+}
+
+/* En pantallas pequeñas el botón se oculta: ya hay menú hamburguesa y el hero tendrá su propio botón */
+@media (max-width: 720px) {
+  .header__cta { display: none; }
+}
