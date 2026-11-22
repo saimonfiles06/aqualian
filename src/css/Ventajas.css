@@ -1,0 +1,44 @@
+.ventajas {
+  background: #f3f8fc;
+  padding: 96px clamp(20px, 5.5vw, 80px);
+  color: #06172e;
+}
+
+.ventajas__interior {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ventajas__etiqueta {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #077a99;
+  margin-bottom: 12px;
+}
+
+.ventajas__titulo {
+  margin: 0 0 48px;
+  max-width: 640px;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #06172e;
+}
+
+/* Iconos de las tarjetas con la paleta de Aqualian */
+.ventajas .magic-bento__icon {
+  color: #0a7ea4;
+  font-size: 20px;
+}
+.ventajas .magic-bento__label {
+  color: #077a99;
+}
+.ventajas .magic-bento__title {
+  color: #06172e;
+}
+.ventajas .magic-bento__description {
+  color: #5a6b7d;
+}
