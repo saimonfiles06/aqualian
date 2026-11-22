@@ -1,0 +1,44 @@
+.cta {
+  background: linear-gradient(105deg, #06172e 0%, #0b2f5b 55%, #0e5a8f 100%);
+  color: #fff;
+  padding: 96px clamp(20px, 5.5vw, 80px);
+  text-align: center;
+}
+
+.cta__interior {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta__etiqueta {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7fe6f5;
+  margin-bottom: 12px;
+}
+
+.cta__titulo {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.cta__texto {
+  margin: 0 0 40px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.cta__boton {
+  padding: 16px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
