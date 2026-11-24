@@ -3,7 +3,6 @@ import GradientWaves from "./GradientWaves";
 import BlurText from "./BlurText";
 import ShinyText from "./ShinyText";
 import SpecularButton from "./SpecularButton";
-import RippleDistortion from "./RippleDistortion";
 import heroImg from "../assets/img/hero-piscina.jpg";
 import "../css/Hero.css";
 
@@ -19,6 +18,8 @@ export default function Hero() {
           crestColor="#B8F3FB"
           backgroundColor="#06172E"
         />
+        <img className="hero__imagen" src={heroImg} alt="" loading="eager" />
+        <div className="hero__velo" />
       </div>
 
       <div className="hero__contenido">
@@ -54,15 +55,6 @@ export default function Hero() {
           >
             Ver nuestros proyectos →
           </SpecularButton>
-        </div>
-
-        <div className="hero__foto">
-          <RippleDistortion
-            src={heroImg}
-            grayscale={false}
-            tint="#2FD0E8"
-            tintAmount={0.15}
-          />
         </div>
       </div>
     </section>
