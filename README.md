@@ -1,16 +1,139 @@
-# React + Vite
+# Aqualian Piscinas · Web corporativa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web corporativa de **Aqualian Piscinas**, empresa de diseño, construcción, reformas y mantenimiento de piscinas a medida, con sede en Burjassot (Valencia). Está pensada para arquitectos, constructoras y profesionales del sector.
 
-Currently, two official plugins are available:
+🔗 **Producción:** [aqualian.vercel.app](https://aqualian.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tabla de contenidos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Stack tecnológico](#stack-tecnológico)
+- [Estado del proyecto](#estado-del-proyecto)
+- [Requisitos](#requisitos)
+- [Puesta en marcha](#puesta-en-marcha)
+- [Scripts disponibles](#scripts-disponibles)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Rutas](#rutas)
+- [Arquitectura y convenciones](#arquitectura-y-convenciones)
+- [Despliegue](#despliegue)
+- [Versión original (HTML estático)](#versión-original-html-estático)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Stack tecnológico
+
+| Área | Tecnología |
+| --- | --- |
+| Framework UI | React 19 |
+| Bundler / dev server | Vite 8 con `@vitejs/plugin-react` |
+| Enrutado | React Router DOM 7 (`BrowserRouter`) |
+| Animaciones | GSAP, Motion |
+| Gráficos WebGL | OGL (fondo de olas del hero) |
+| Iconos | Bootstrap Icons, Hugeicons |
+| Calidad de código | ESLint 10 (reglas recomendadas, React Hooks y React Refresh) |
+| Hosting | Vercel |
+
+Módulo ES (`"type": "module"`), JavaScript con JSX (sin TypeScript) y CSS plano por componente.
+
+## Estado del proyecto
+
+Migración en curso desde una web estática en HTML/CSS/JS (carpeta `original/`) a una SPA en React.
+
+| Sección | Estado |
+| --- | --- |
+| Inicio (`/`) | ✅ Implementada: hero, ventajas, proyectos destacados y llamada a la acción |
+| Header y Footer | ✅ Implementados |
+| Nosotros (`/nosotros`) | 🚧 Vista creada, contenido pendiente |
+| Servicios (`/servicios`) | 🚧 Vista creada, contenido pendiente |
+| Proyectos (`/proyectos`) | 🚧 Vista creada, contenido pendiente (el filtrado del portfolio existe en la versión original) |
+| Contacto (`/contacto`) | 🚧 Vista creada, contenido pendiente |
+
+## Requisitos
+
+- [Node.js](https://nodejs.org/) compatible con Vite 8 (se recomienda la versión LTS más reciente)
+- npm (incluido con Node.js)
+
+## Puesta en marcha
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/saimonfiles06/aqualian.git
+cd aqualian
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Arrancar el servidor de desarrollo
+npm run dev
+```
+
+Vite mostrará en consola la URL local (por defecto `http://localhost:5173`).
+
+## Scripts disponibles
+
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo con recarga en caliente (HMR) |
+| `npm run build` | Compilación de producción en `dist/` |
+| `npm run preview` | Sirve localmente la compilación de producción |
+| `npm run lint` | Analiza el código con ESLint |
+
+## Estructura del repositorio
+
+```text
+aqualian/
+├── index.html               # Punto de entrada HTML de la SPA
+├── vite.config.js           # Configuración de Vite (plugin de React)
+├── eslint.config.js         # Configuración de ESLint
+├── package.json
+├── public/                  # Recursos estáticos servidos tal cual (favicon.svg, icons.svg)
+├── src/
+│   ├── main.jsx             # Arranque de React
+│   ├── App.jsx              # Enrutador y definición de rutas
+│   ├── index.css            # Estilos globales (tipografía Inter, layout base)
+│   ├── views/               # Una vista por página
+│   ├── components/          # Componentes reutilizables
+│   ├── css/                 # Hoja de estilos por componente
+│   └── assets/img/          # Imágenes y logos importados desde el código
+└── original/                # Web estática anterior (HTML, CSS y JS), conservada como referencia
+```
+
+## Rutas
+
+Definidas en `src/App.jsx`:
+
+| Ruta | Vista |
+| --- | --- |
+| `/` | `InicioView` |
+| `/nosotros` | `NosotrosView` |
+| `/servicios` | `ServiciosView` |
+| `/proyectos` | `ProyectosView` |
+| `/contacto` | `ContactoView` |
+
+## Arquitectura y convenciones
+
+- **Vistas** (`src/views/`): componen la página con `Header`, un `<main className="pagina__contenido">` y `Footer`.
+- **Componentes de negocio**: `Header`, `Hero`, `Ventajas`, `Proyectos`, `CtaContacto` y `Footer`.
+- **Componentes visuales reutilizables**: `PillNav`, `GradientWaves`, `BlurText`, `ShinyText`, `SpecularButton`, `MagicBento`, `TiltedCard`, `StarBorder`, `Magnet`, `Noise` y `GlassIcons`. Son componentes de efectos y animación parametrizables mediante props.
+- **Navegación**: `PillNav` recibe un `linkComponent` que enlaza con `Link` de React Router, de modo que la navegación no recarga la página.
+- **Estilos**: CSS plano, un archivo por componente en `src/css/`, con nomenclatura tipo BEM (`hero__titulo`, `ventajas__etiqueta`…). Los textos y clases están en español.
+- **Paleta**: azul marino `#06172E` como fondo, cian `#2FD0E8` como color de acento.
+- **Tipografía**: Inter, cargada desde Google Fonts.
+- **Idioma del sitio**: español (`lang="es-ES"`).
+
+## Despliegue
+
+El sitio se publica en [Vercel](https://aqualian.vercel.app). El repositorio no incluye `vercel.json`, por lo que se usa la detección automática de Vite (`npm run build`, directorio de salida `dist`).
+
+> ⚠️ Al usar `BrowserRouter`, las rutas internas (por ejemplo `/nosotros`) solo se resuelven si el hosting redirige cualquier ruta a `index.html`. Si al recargar una subpágina en producción aparece un 404, hay que añadir esa regla de reescritura en Vercel.
+
+## Versión original (HTML estático)
+
+La carpeta `original/` contiene la web anterior, con las páginas `index`, `nosotros`, `servicios`, `proyectos` y `contacto`, su hoja de estilos (`assets/css/estilos.css`) y scripts propios (`assets/js/script.js` y `assets/js/filtros.js`, este último con el filtrado del portfolio de proyectos). Se mantiene como referencia de contenido y diseño durante la migración y no forma parte de la compilación de Vite.
+
+## Contacto
+
+- 📍 Burjassot, Valencia
+- ✉️ [info@aqualian.com](mailto:info@aqualian.com)
+- 📸 [Instagram: @aqualianpiscinas](https://www.instagram.com/aqualianpiscinas/)
