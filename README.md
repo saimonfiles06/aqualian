@@ -49,36 +49,6 @@ Migración en curso desde una web estática en HTML/CSS/JS (carpeta `original/`)
 | Proyectos (`/proyectos`) | 🚧 Vista creada, contenido pendiente (el filtrado del portfolio existe en la versión original) |
 | Contacto (`/contacto`) | 🚧 Vista creada, contenido pendiente |
 
-## Requisitos
-
-- [Node.js](https://nodejs.org/) compatible con Vite 8 (se recomienda la versión LTS más reciente)
-- npm (incluido con Node.js)
-
-## Puesta en marcha
-
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/saimonfiles06/aqualian.git
-cd aqualian
-
-# 2. Instalar dependencias
-npm install
-
-# 3. Arrancar el servidor de desarrollo
-npm run dev
-```
-
-Vite mostrará en consola la URL local (por defecto `http://localhost:5173`).
-
-## Scripts disponibles
-
-| Comando | Descripción |
-| --- | --- |
-| `npm run dev` | Servidor de desarrollo con recarga en caliente (HMR) |
-| `npm run build` | Compilación de producción en `dist/` |
-| `npm run preview` | Sirve localmente la compilación de producción |
-| `npm run lint` | Analiza el código con ESLint |
-
 ## Estructura del repositorio
 
 ```text
@@ -121,12 +91,6 @@ Definidas en `src/App.jsx`:
 - **Paleta**: azul marino `#06172E` como fondo, cian `#2FD0E8` como color de acento.
 - **Tipografía**: Inter, cargada desde Google Fonts.
 - **Idioma del sitio**: español (`lang="es-ES"`).
-
-## Despliegue
-
-El sitio se publica en [Vercel](https://aqualian.vercel.app). El repositorio no incluye `vercel.json`, por lo que se usa la detección automática de Vite (`npm run build`, directorio de salida `dist`).
-
-> ⚠️ Al usar `BrowserRouter`, las rutas internas (por ejemplo `/nosotros`) solo se resuelven si el hosting redirige cualquier ruta a `index.html`. Si al recargar una subpágina en producción aparece un 404, hay que añadir esa regla de reescritura en Vercel.
 
 ## Versión original (HTML estático)
 
